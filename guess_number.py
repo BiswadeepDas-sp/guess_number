@@ -26,7 +26,7 @@ class User:
                 print('You have entered an invalid response')
         
         if choice==0:
-            g.game_play()
+            game.game_play()
         else:
             exit()
             
@@ -67,5 +67,5 @@ class Game:
             pass
         user.cont_exit()
     
-g=Game()
-g.game_play()
+game=Game()
+game.game_play()
