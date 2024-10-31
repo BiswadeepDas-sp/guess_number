@@ -10,9 +10,9 @@ class User:
         made_guess=False
         while made_guess==False:
            try:
-               print('*'*30)
+               print()
                guess_num=int(input('Guess a number between 1 to 100:  '))
-               print('*'*30)
+               print()
                made_guess=True
            except:
                print('Enter a valid response')
@@ -46,7 +46,7 @@ class Game:
         self.num_gen=number.generate() 
         self.cheat=False
         score=0
-        print(f'The number is {self.num_gen}')
+        #print(f'The number is {self.num_gen}')
         while win==False and self.guess_left>0:
            self.guess=user.guess_input()
            if self.guess>100:
@@ -62,7 +62,7 @@ class Game:
                     
                 print()
                 if self.cheat==False:
-                    print('*'*30)
+                    print()
                     print(f'You have won in {5-self.guess_left} {'guesses' if 5-self.guess_left>1 else 'guess'}')
                     print('*'*30)
                     
@@ -77,7 +77,7 @@ class Game:
            print('*'*30)
                 
         if self.guess_left==0 and win==False:
-            print('*'*30)
+            print()
             print('Too many guesses, Better luck next time!!')
             print()
             print(f'The number was {self.num_gen}')
@@ -86,14 +86,13 @@ class Game:
             if self.cheat==True:
                 print('*'*30)
                 print('HMMMM. Okay!')
-                print('*'*30)
+                
         except:
             pass
-        print('*'*30)
+       
         user.cont_exit() 
         print()
         print('*'*30)
     
 game=Game()
-game.game_play()
 game.game_play()
